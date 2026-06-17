@@ -57,6 +57,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'sync_token' => env('SYNC_TOKEN'),
+
     'asset_url' => env('ASSET_URL'),
 
     /*

@@ -27,10 +27,6 @@ class Vehicle extends Model
         'year'     => 'integer',
     ];
 
-    // -------------------------------------------------------------------------
-    // Accessors
-    // -------------------------------------------------------------------------
-
     /** Display price: prefer sale_price, fall back to msrp. */
     public function getDisplayPriceAttribute(): ?float
     {
@@ -43,10 +39,6 @@ class Vehicle extends Model
         $images = $this->images ?? [];
         return $images[0] ?? 'https://placehold.co/400x260/e9ecef/6c757d?text=No+Image';
     }
-
-    // -------------------------------------------------------------------------
-    // Scopes
-    // -------------------------------------------------------------------------
 
     public function scopeSearch(Builder $q, ?string $term): Builder
     {
